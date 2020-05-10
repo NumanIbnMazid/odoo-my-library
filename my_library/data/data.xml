@@ -6,6 +6,12 @@
         <field name="country_id" ref="base.uk" />
     </record>
 
+    <record id="res_partner_numan" model="res.partner">
+        <field name="name">Numan Publishing</field>
+        <field name="city">Dhaka</field>
+        <field name="country_id" ref="base.uk" />
+    </record>
+
     <record id="book_category_all" model="library.book.category" forcecreate="False">
         <field name="name">All books</field>
     </record>

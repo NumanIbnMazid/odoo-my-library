@@ -28,4 +28,12 @@
         <field name="publisher_id" ref="res_partner_packt" />
     </record>
 
+    <record id="book_numanbook" model="library.book">
+        <field name="name">Numan's Book</field>
+        <field name="short_name">nmnbook</field>
+        <field name="date_release">2017-03-01</field>
+        <field name="author_ids" eval="[(6, 0, [ref('author_pga'),ref('author_af')])]" />
+        <field name="publisher_id" ref="res_partner_numan" />
+    </record>
+
 </odoo>

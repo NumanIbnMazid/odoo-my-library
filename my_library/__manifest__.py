@@ -32,7 +32,7 @@
         'views/library_book.xml',
         'views/library_book_categ.xml',
         'data/data.xml',
-        # 'data/demo.xml',
+        'views/library_book_rent.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

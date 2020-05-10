@@ -304,6 +304,18 @@ class LibraryBook(models.Model):
         for book in all_books:
             book.cost_price += 10
 
+    def book_rent(self):
+        self.ensure_one()
+        if self.state != 'available':
+            raise UserError(_('Book is not available for renting'))
+        # public_user = self.env.ref('base.public_user')
+        # public_book = self.env['library.book'].sudo(public_user)
+        rent_as_superuser = self.env['library.book.rent'].sudo()
+        rent_as_superuser.create({
+            'book_id': self.id,
+            'borrower_id': self.env.user.partner_id.id,
+        })
+
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
