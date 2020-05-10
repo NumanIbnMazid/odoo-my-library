@@ -10,6 +10,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+_logger = logging.getLogger(__name__)
+
 
 class BaseArchive(models.AbstractModel):
     _name = 'base.archive'
@@ -293,6 +295,14 @@ class LibraryBook(models.Model):
             ['category_id']  # group_by
                 )
         return grouped_result
+
+    @api.model
+    def update_book_price(self):
+        # NOTE: Real cases can be complex but here we just increse cost price by 10
+        _logger.info('Method update_book_price called from XML')
+        all_books = self.search([])
+        for book in all_books:
+            book.cost_price += 10
 
 
 class ResPartner(models.Model):
