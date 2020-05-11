@@ -33,6 +33,7 @@
         'views/library_book_categ.xml',
         'data/data.xml',
         'views/library_book_rent.xml',
+        'views/library_rent_wizard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
