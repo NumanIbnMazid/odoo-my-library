@@ -34,7 +34,11 @@
         'data/data.xml',
         'views/library_book_rent.xml',
         'views/library_rent_wizard.xml',
+        'views/library_book_return_wizard.xml',
+        'views/library_book_statistics.xml',
+        'views/res_config_settings_view.xml',
     ],
+    'post_init_hook': 'add_book_hook',
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
