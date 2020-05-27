@@ -39,10 +39,10 @@
         <field name="res_model">res.partner</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="domain">[('active', '=', True)]</field>
-        <field name="context">{'default_customer': True, 'kanban_view_ref': 'my_module.view_all_customers_kanban'}</field>
+        <field name="context">{'default_customer': True, 'kanban_view_ref': 'my_library.view_all_customers_kanban'}</field>
         <field name="limit">20</field>
     </record>
 
-    <menuitem id="menu_custom_top_level_kanban" name="My App menu" web_icon="my_module,static/description/icon.png"/>
+    <menuitem id="menu_custom_top_level_kanban" name="My App menu" web_icon="my_library,static/description/icon.png"/>
     <menuitem id="menu_all_customers" parent="menu_custom_top_level_kanban" action="action_all_customers" sequence="10" />
 </odoo>

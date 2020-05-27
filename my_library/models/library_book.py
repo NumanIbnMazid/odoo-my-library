@@ -371,7 +371,7 @@ class LibraryMember(models.Model):
 
     _description = 'Library Member'
 
-    partner_id = fields.Many2one('res.partner', ondelete='cascade')
+    partner_id = fields.Many2one('res.partner', ondelete='cascade', required=True)
     date_start = fields.Date('Member Since')
     date_end = fields.Date('Termination Date')
     member_number = fields.Char()

@@ -37,12 +37,15 @@
         'views/library_book_return_wizard.xml',
         'views/library_book_statistics.xml',
         'views/res_config_settings_view.xml',
-        'views/my_contacts.xml',
-        'views/my_contacts_kanban.xml',
+        # 'views/my_contacts.xml',
+        # 'views/my_contacts_kanban.xml',
     ],
     'post_init_hook': 'add_book_hook',
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
 }
